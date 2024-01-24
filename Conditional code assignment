@@ -1,0 +1,109 @@
+unction setup() {
+
+createCanvas(windowWidth, windowHeight);
+
+background(255, 102, 25);
+
+}
+
+function draw() {
+
+noStroke();
+
+// Web
+
+fill(191, 185, 182);
+
+rect(372, 1, 10, 270);
+
+// leg 1
+
+strokeWeight(8);
+
+stroke(0);
+
+line(345, 259, 229, 148);
+
+line(229, 148, 107, 271);
+
+// leg 2
+
+line(328, 283, 240, 229);
+
+line(240, 229, 94, 378);
+
+// leg 3
+
+line(330, 318, 224, 360);
+
+line(224, 360, 108, 521);
+
+// leg 4
+
+line(343, 334, 253, 453);
+
+line(253, 453, 345, 552);
+
+// line 5
+
+line(402, 257, 528, 148);
+
+line(528, 148, 628, 271);
+
+// leg 6
+
+line(415, 283, 502, 229);
+
+line(502, 229, 629, 378);
+
+// leg 7
+
+line(417, 309, 518, 360);
+
+line(518, 360, 626, 521);
+
+// leg 8
+
+line(402, 334, 512, 453);
+
+line(512, 453, 423, 554);
+
+// face
+
+fill(0);
+
+ellipse(375, 300, 85);
+
+// eyes
+
+fill(255);
+
+ellipse(355, 283, 25);
+
+ellipse(395, 283, 25);
+
+// mouth
+
+noFill();
+
+stroke(255);
+
+arc(375, 320, 40, 40, 0, PI);
+}
+function mousePressed(){
+  ellipse(mouseX,mouseY,50);//draws a circle every time the mouse is pressed
+}
+function keyPressed() {
+  if (key === 'a') {
+    changeColor();
+  }
+}
+
+function changeColor() {
+  let r = floor(random(256));
+  let g = floor(random(256));
+  let b = floor(random(256));
+  background(r, g, b);
+
+  
+}
